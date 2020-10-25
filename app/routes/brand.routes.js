@@ -12,5 +12,5 @@ module.exports = (app) => {
     const controller = new appController();
 
     // Retrieve all Notes
-    app.get('/brands', controller.findAll);
+    app.get('/brands', attchDependancy, controller.findAll);
 }
