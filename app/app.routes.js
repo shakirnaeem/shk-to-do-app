@@ -1,3 +1,6 @@
 module.exports = (app) => {
-    require('./routes/brand.routes.js')(app);
+    app.get('/brands', (req, res) => {
+        res.send("test shk");
+    });
+    //require('./routes/brand.routes.js')(app);
 }
