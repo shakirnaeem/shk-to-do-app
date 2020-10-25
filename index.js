@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 // create express app
 const app = express();
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }))
