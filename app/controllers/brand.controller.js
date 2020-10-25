@@ -20,7 +20,7 @@ class BrandController {
         let response = { errors: [], data: {} }
         //response.data = await req.model.find({ title: new RegExp('my title', "i") });
         response.data = await req.model.find();
-        res.send(response);
+        res.send("brand search");
     };
 
     // Find a single record
