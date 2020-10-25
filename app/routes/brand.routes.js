@@ -1,6 +1,6 @@
 const Model = require('../models/brand.model.js').schema;
 const ModelDto = require('../models/brand.model.js').Dto;
-const appController = require('../controllers/brand.controller.js');
+//const appController = require('../controllers/brand.controller.js');
 
 module.exports = (app) => {
     attchDependancy = (req, res, next) => {
@@ -9,20 +9,8 @@ module.exports = (app) => {
         next();
     };
 
-    // Create a new Note
-    app.post('/brands', attchDependancy, appController.create);
-
     // Retrieve all Notes
     app.get('/brands', (req, res) => {
         res.send("test shk");
     });
-
-    // Retrieve a single Note with noteId
-    app.get('/brands/:id', attchDependancy, appController.findOne);
-
-    // Update a Note with noteId
-    app.put('/brands/:id', attchDependancy, appController.update);
-
-    // Delete a Note with noteId
-    app.delete('/brands/:id', attchDependancy, appController.delete);
 }
