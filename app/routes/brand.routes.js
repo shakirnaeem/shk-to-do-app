@@ -1,6 +1,6 @@
 const Model = require('../models/brand.model.js').schema;
 const ModelDto = require('../models/brand.model.js').Dto;
-//const appController = require('../controllers/brand.controller.js');
+const appController = require('../controllers/brand.controller.js');
 
 module.exports = (app) => {
     attchDependancy = (req, res, next) => {
@@ -10,7 +10,5 @@ module.exports = (app) => {
     };
 
     // Retrieve all Notes
-    app.get('/brands', (req, res) => {
-        res.send("test shk");
-    });
+    app.get('/brands', appController.findAll);
 }
