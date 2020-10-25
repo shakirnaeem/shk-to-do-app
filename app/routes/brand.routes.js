@@ -9,6 +9,8 @@ module.exports = (app) => {
         next();
     };
 
+    const controller = new appController();
+
     // Retrieve all Notes
-    app.get('/brands', appController.findAll);
+    app.get('/brands', controller.findAll);
 }
