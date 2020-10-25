@@ -1,5 +1,3 @@
-let messages = require("../Utilities/messages");
-
 function BrandController() {
     // Retrieve and return all data.
     
