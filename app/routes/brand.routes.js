@@ -14,7 +14,9 @@ module.exports = (app) => {
     app.post('/brands', attchDependancy, appController.create);
 
     // Retrieve all Notes
-    app.get('/brands', attchDependancy, appController.findAll);
+    app.get('/brands', attchDependancy, (req, res) => {
+        res.send("test shk");
+    });
 
     // Retrieve a single Note with noteId
     app.get('/brands/:id', attchDependancy, appController.findOne);
