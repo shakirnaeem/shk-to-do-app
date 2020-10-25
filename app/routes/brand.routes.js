@@ -14,7 +14,7 @@ module.exports = (app) => {
     app.post('/brands', attchDependancy, appController.create);
 
     // Retrieve all Notes
-    app.get('/brands', attchDependancy, (req, res) => {
+    app.get('/brands', (req, res) => {
         res.send("test shk");
     });
 
