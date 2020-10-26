@@ -24,7 +24,7 @@ BrandController.prototype.findAll = async (req, res) => {
         data = await req.model.find();
         myCache.set("_BRANDS_", data);
     }
-    response.data = data;
+    response.data = data.map(x => { x._id, x.name });
     res.send(response);
 };
 
