@@ -13,4 +13,5 @@ module.exports = (app) => {
 
     // Retrieve all Notes
     app.get('/brands', attchDependancy, controller.findAll);
+    app.post('/brands', attchDependancy, controller.create);
 }

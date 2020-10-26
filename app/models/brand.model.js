@@ -5,9 +5,10 @@ const brandSchema = mongoose.Schema({
     slug: String,
     numberOfDevices: Number,
     isDeleted: Boolean,
-    position: Number
+    position: Number,
+    isPopular: Boolean
 }, {
-    timestamps: true
+    timestamps: false
 });
 
 class brandDto{
@@ -17,6 +18,7 @@ class brandDto{
         this.numberOfDevices = 0;
         this.isDeleted = false;
         this.position = 0;
+        this.isPopular = false;
     }
 }
 
